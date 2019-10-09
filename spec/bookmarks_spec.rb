@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'bookmarks'
 require 'database_helpers'
 
 describe Bookmarks do
-
   subject(:bookmarks) { described_class.new }
 
   describe '.all' do
@@ -32,12 +33,11 @@ describe Bookmarks do
       expect(bookmark.id).to eq persisted_data.first['id']
       expect(bookmark.title).to eq 'Test'
       expect(bookmark.url).to eq 'www.test.com'
-   end
+    end
   end
 
   describe '.delete' do
     it 'removes a user specified bookmark' do
-
       bookmark = Bookmarks.create(url: 'www.bbc.co.uk/sport', title: 'BBC Sport')
 
       Bookmarks.delete(id: bookmark.id)

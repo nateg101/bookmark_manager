@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'pg'
 
 feature 'Remove an existing bookmark' do
   scenario 'User removes a bookmark' do
     Bookmarks.create(url: 'www.miniclip.com', title: 'Miniclip')
 
-    visit ('/bookmarks')
+    visit '/bookmarks'
     expect(page).to have_link('Miniclip', href: 'www.miniclip.com')
 
     first('.bookmark').click_button('Delete')

@@ -1,12 +1,13 @@
+# frozen_string_literal: true
+
 require 'sinatra/base'
 require_relative './lib/bookmarks'
 
 class BookmarkManager < Sinatra::Base
-
   enable :sessions, :method_override
 
   get '/' do
-    "Bookmark Manager"
+    'Bookmark Manager'
     # erb :index
   end
 
@@ -27,17 +28,17 @@ class BookmarkManager < Sinatra::Base
 
   get '/bookmarks/:id/update' do
     @bookmark = Bookmarks.find(id: params[:id])
-    erb:'bookmarks/update'
+    erb :'bookmarks/update'
   end
 
   patch '/bookmarks/:id' do
     Bookmarks.update(id: params[:id], url: params[:url], title: params[:title])
-    redirect ('/bookmarks')
+    redirect '/bookmarks'
   end
 
   get '/bookmarks/new' do
     erb(:"bookmarks/new")
   end
 
-  run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end
