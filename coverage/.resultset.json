@@ -8,7 +8,6 @@
         1,
         null,
         1,
-        1,
         null,
         1,
         1,
@@ -83,18 +82,40 @@
       ],
       "/Users/Nat/Projects/bookmark_manager/spec/database_helpers.rb": [
         null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Nat/Projects/bookmark_manager/spec/comment_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         1,
         null,
         1,
         1,
         1,
+        1,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
         null
       ],
       "/Users/Nat/Projects/bookmark_manager/spec/database_connection_spec.rb": [
@@ -123,6 +144,26 @@
         null,
         1,
         null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Nat/Projects/bookmark_manager/spec/features/add_and_view_comments_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
         1,
         null,
         null,
@@ -224,6 +265,6 @@
         null
       ]
     },
-    "timestamp": 1570802564
+    "timestamp": 1570809392
   }
 }

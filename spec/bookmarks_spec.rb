@@ -4,7 +4,6 @@ require 'bookmarks'
 require 'database_helpers'
 
 describe Bookmarks do
-  subject(:bookmarks) { described_class.new }
 
   describe '.all' do
     it 'should return a list of bookmarks' do
@@ -27,7 +26,7 @@ describe Bookmarks do
   describe '.create' do
     it 'creates a new bookmark' do
       bookmark = Bookmarks.create(url: 'https://www.test.com/', title: 'Test')
-      persisted_data = persisted_data(id: bookmark.id)
+      persisted_data = persisted_data(table: 'bookmarks', id: bookmark.id)
 
       expect(bookmark).to be_a Bookmarks
       expect(bookmark.id).to eq persisted_data.first['id']
