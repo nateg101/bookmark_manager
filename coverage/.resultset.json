@@ -39,6 +39,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         1,
         1,
@@ -93,10 +98,11 @@
         null
       ],
       "/Users/Nat/Projects/bookmark_manager/spec/database_connection_spec.rb": [
-        1,
+        null,
         null,
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -132,6 +138,15 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         1,
         1,
         null,
@@ -209,6 +224,6 @@
         null
       ]
     },
-    "timestamp": 1570786819
+    "timestamp": 1570802564
   }
 }

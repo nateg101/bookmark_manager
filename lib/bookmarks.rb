@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'pg'
 require_relative 'database_connection'
+require 'uri'
 
 class Bookmarks
   attr_reader :id, :title, :url
@@ -17,18 +17,13 @@ class Bookmarks
 
     result.map do |bookmark|
       Bookmarks.new(id: bookmark['id'],
-        title: bookmark['title'],
-        url: bookmark['url']
-      )
+                    title: bookmark['title'],
+                    url: bookmark['url'])
     end
   end
 
   def self.create(url:, title:)
-    connection = if ENV['ENVIRONMENT'] == 'test'
-                   PG.connect(dbname: 'bookmark_manager_test')
-                 else
-                   PG.connect(dbname: 'bookmark_manager')
-                 end
+    return false unless is_url?(url)
     result = DatabaseConnection.query("INSERT INTO bookmarks (title, url) VALUES('#{title}', '#{url}') RETURNING id, title, url;")
     Bookmarks.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
@@ -38,7 +33,6 @@ class Bookmarks
   end
 
   def self.update(id:, url:, title:)
-
     result = DatabaseConnection.query("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = #{id} RETURNING id, url, title;")
     Bookmarks.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
@@ -46,5 +40,11 @@ class Bookmarks
   def self.find(id:)
     result = DatabaseConnection.query("SELECT * FROM bookmarks WHERE id = #{id};")
     Bookmarks.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+  end
+
+  private
+
+  def self.is_url?(url)
+    url =~ /\A#{URI::regexp(['http', 'https'])}\z/
   end
 end

@@ -8,7 +8,7 @@ def persisted_data(id:)
 end
 
 def create_urls
-  Bookmarks.create(url: 'www.bbc.co.uk/sport', title: 'BBC Sport')
-  Bookmarks.create(url: 'www.miniclip.com', title: 'Miniclip')
-  Bookmarks.create(url: 'www.cartoonnetwork.co.uk', title: 'CN')
+  Bookmarks.create(url: 'https://www.bbc.co.uk/sport', title: 'BBC Sport')
+  Bookmarks.create(url: 'https://www.miniclip.com/games/en/', title: 'Miniclip')
+  Bookmarks.create(url: 'https://www.cartoonnetwork.co.uk/', title: 'CN')
 end
