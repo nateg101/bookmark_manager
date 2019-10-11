@@ -2,14 +2,11 @@
   "RSpec": {
     "coverage": {
       "/Users/Nat/Projects/bookmark_manager/spec/bookmarks_spec.rb": [
+        null,
+        null,
         1,
         1,
         null,
-        1,
-        null,
-        1,
-        null,
-        1,
         1,
         1,
         null,
@@ -18,20 +15,12 @@
         1,
         null,
         1,
-        null,
-        1,
-        1,
-        1,
         1,
         1,
         null,
-        null,
-        null,
-        1,
-        1,
-        1,
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -41,7 +30,18 @@
         null,
         1,
         1,
+        1,
+        1,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
         1,
         null,
         1,
@@ -77,6 +77,8 @@
         null
       ],
       "/Users/Nat/Projects/bookmark_manager/spec/database_helpers.rb": [
+        null,
+        null,
         1,
         null,
         1,
@@ -90,7 +92,39 @@
         1,
         null
       ],
+      "/Users/Nat/Projects/bookmark_manager/spec/database_connection_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Nat/Projects/bookmark_manager/spec/features/add_new_bookmark_spec.rb": [
+        null,
+        null,
         1,
         null,
         1,
@@ -104,6 +138,8 @@
         null
       ],
       "/Users/Nat/Projects/bookmark_manager/spec/features/delete_bookmark_spec.rb": [
+        null,
+        null,
         1,
         null,
         1,
@@ -131,6 +167,8 @@
         null
       ],
       "/Users/Nat/Projects/bookmark_manager/spec/features/update_bookmarks_spec.rb": [
+        null,
+        null,
         1,
         null,
         1,
@@ -154,6 +192,8 @@
         null
       ],
       "/Users/Nat/Projects/bookmark_manager/spec/features/view_bookmarks_spec.rb": [
+        null,
+        null,
         1,
         null,
         1,
@@ -169,6 +209,6 @@
         null
       ]
     },
-    "timestamp": 1570635078
+    "timestamp": 1570786819
   }
 }
